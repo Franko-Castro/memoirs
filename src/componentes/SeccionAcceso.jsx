@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import './SeccionAcceso.css';
 
-function SeccionAcceso() {
+function SeccionAcceso({ onLogin }) {
   const [tabActivo, setTabActivo] = useState('login');
 
   // Datos del formulario
@@ -96,10 +96,10 @@ function SeccionAcceso() {
           resultado.refresh_token
         );
 
-        sessionStorage.setItem(
-          'memoirs_usuario',
-          JSON.stringify(resultado.usuario)
-        );
+       // Avisar a App.jsx que el usuario inició sesión
+if (onLogin) {
+  onLogin(resultado.usuario);
+}
 
         setMensaje('¡Bienvenido a MEMOIRS! Has iniciado sesión correctamente.');
         setTipoMensaje('exito');
