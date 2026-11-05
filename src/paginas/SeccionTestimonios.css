@@ -1,0 +1,107 @@
+/* SeccionTestimonios.css */
+
+.rejilla-testimonios {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .rejilla-testimonios {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+  }
+}
+
+.ficha-testimonio {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem 1.5rem 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.2);
+  transform: rotate(var(--rotacion, 0deg));
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.ficha-testimonio:hover {
+  transform: rotate(0deg) translateY(-4px);
+  box-shadow: 0 18px 30px -10px rgba(0, 0, 0, 0.25);
+}
+
+/* Papel de colores post-it */
+.fondo-rosa {
+  background: var(--secundario-fijo);
+  color: #400012;
+}
+
+.fondo-lavanda {
+  background: var(--primario-fijo);
+  color: #21143b;
+}
+
+.fondo-ambar {
+  background: #ffeecb;
+  color: #4a3405;
+}
+
+/* Cinta washi superior */
+.cinta-ficha {
+  position: absolute;
+  top: -0.7rem;
+  left: 50%;
+  width: 5.5rem;
+  height: 1.4rem;
+  background: rgba(255, 255, 255, 0.55);
+  border-left: 1px dashed rgba(0, 0, 0, 0.12);
+  border-right: 1px dashed rgba(0, 0, 0, 0.12);
+  transform: translateX(-50%) rotate(-2deg);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  pointer-events: none;
+}
+
+.estrellas {
+  display: flex;
+  gap: 2px;
+}
+
+.estrellas .material-icono {
+  font-size: 18px;
+  font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+}
+
+.cita-testimonio {
+  margin: 0;
+  font-family: var(--fuente-manuscrita);
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.firma-testimonio {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 0.75rem;
+  border-top: 1px dashed currentColor;
+}
+
+.nombre-testimonio {
+  font-family: var(--fuente-titulo);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.rol-testimonio {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.fecha-testimonio {
+  font-family: var(--fuente-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}

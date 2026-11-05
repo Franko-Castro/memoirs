@@ -1,0 +1,434 @@
+
+/* CONTENEDOR GENERAL */
+
+.pagina-inicio {
+  min-height: 100vh;
+  overflow: hidden;
+  background: #fff8f5;
+  color: #221a15;
+}
+
+/* ENCABEZADO */
+
+.encabezado {
+  min-height: 80px;
+  padding: 18px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: #fff1ea;
+  border-bottom: 1px solid #efdfd7;
+}
+
+.logotipo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #64557f;
+  font-size: 23px;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.logotipo-icono {
+  font-size: 30px;
+}
+
+.navegacion {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.navegacion a {
+  color: #49454e;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navegacion a:hover {
+  color: #64557f;
+}
+
+.boton-encabezado,
+.boton-principal {
+  display: inline-block;
+  padding: 13px 20px;
+  border-radius: 9px;
+  background: #64557f;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.boton-encabezado:hover,
+.boton-principal:hover {
+  background: #7d6d9a;
+}
+
+/* SECCIÓN PRINCIPAL */
+
+.seccion-principal {
+  max-width: 1320px;
+  min-height: 600px;
+  margin: 0 auto;
+  padding: 70px 6%;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  align-items: center;
+  gap: 55px;
+}
+
+.contenido-principal {
+  max-width: 570px;
+}
+
+.etiqueta-retro {
+  display: inline-block;
+  padding: 8px 13px;
+  border-radius: 5px;
+  background: #ffd9dd;
+  color: #79293a;
+  font-size: 13px;
+  font-weight: bold;
+  transform: rotate(-1deg);
+}
+
+.contenido-principal h1 {
+  margin: 25px 0;
+  font-size: clamp(38px, 4vw, 58px);
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+}
+
+.texto-manuscrito {
+  color: #64557f;
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.descripcion-principal {
+  max-width: 490px;
+  color: #625b60;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.acciones-principales {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.boton-secundario {
+  padding: 13px 18px;
+  border-radius: 9px;
+  background: #f5e5dc;
+  color: #382f29;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.nota-informativa {
+  margin-top: 28px;
+  color: #7a757e;
+  font-size: 12px;
+}
+
+/* CUADERNO DE EJEMPLO */
+
+.vista-cuaderno {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  padding: 25px;
+  border-radius: 18px;
+  background: #f5e5dc;
+  box-shadow: 0 20px 45px #382f2912;
+}
+
+.hoja-cuaderno {
+  min-height: 310px;
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 8px;
+  background-color: #fffdfb;
+  box-shadow: 0 5px 15px #382f2910;
+}
+
+.hoja-compras {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 31px,
+    #efdfd7 32px
+  );
+}
+
+.hoja-ideas {
+  background-image: radial-gradient(
+    #d1bef0 1px,
+    transparent 1px
+  );
+  background-size: 14px 14px;
+}
+
+.etiqueta-hoja {
+  padding: 6px 9px;
+  border-radius: 5px;
+  background: #ffd9dd;
+  color: #79293a;
+  font-size: 12px;
+}
+
+.hoja-cuaderno h2 {
+  margin: 25px 0 15px;
+  font-size: 19px;
+}
+
+.hoja-cuaderno ul {
+  padding-left: 0;
+  list-style: none;
+  line-height: 2.4;
+  font-size: 14px;
+}
+
+.hoja-cuaderno p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.texto-guardado {
+  margin-top: auto;
+  color: #994252;
+  font-size: 12px;
+}
+
+/* INTRODUCCIÓN */
+
+.seccion-introduccion {
+  padding: 65px 20px 90px;
+  text-align: center;
+}
+
+.seccion-introduccion h2 {
+  margin: 22px 0 12px;
+  font-size: clamp(26px, 3vw, 36px);
+}
+
+.seccion-introduccion p {
+  color: #625b60;
+  line-height: 1.8;
+}
+
+/* DISEÑO PARA TABLETAS Y CELULARES */
+
+@media (max-width: 900px) {
+  .navegacion {
+    gap: 12px;
+  }
+
+  .navegacion a {
+    font-size: 12px;
+  }
+
+  .seccion-principal {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contenido-principal {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 600px) {
+  .encabezado {
+    padding: 16px 5%;
+    flex-wrap: wrap;
+  }
+
+  .navegacion {
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    padding: 8px 0;
+  }
+
+  .boton-encabezado {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .seccion-principal {
+    padding: 45px 5%;
+  }
+
+  .contenido-principal h1 {
+    font-size: 39px;
+  }
+
+  .vista-cuaderno {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .hoja-cuaderno {
+    min-height: 250px;
+  }
+}
+/* ============================================
+   NUEVAS SECCIONES
+   ============================================ */
+
+/* ETIQUETA DE SECCIÓN (reutilizable) */
+
+.etiqueta-seccion {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 5px;
+  background: #ffd9dd;
+  color: #79293a;
+  font-size: 13px;
+  font-weight: bold;
+  transform: rotate(-1deg);
+}
+
+/* SECCIÓN DE INTRODUCCIÓN */
+
+.seccion-introduccion {
+  padding: 65px 20px 90px;
+  text-align: center;
+}
+
+.seccion-introduccion h2 {
+  margin: 22px 0 12px;
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1.3;
+}
+
+.seccion-introduccion p {
+  color: #625b60;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* SECCIÓN DE CARACTERÍSTICAS */
+
+.seccion-caracteristicas {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 6% 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.tarjeta-caracteristica {
+  padding: 32px 24px;
+  border-radius: 14px;
+  background: #fffdfb;
+  box-shadow: 0 5px 20px #382f290d;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tarjeta-caracteristica:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px #382f2915;
+}
+
+.icono-caracteristica {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #f5e5dc;
+  font-size: 26px;
+}
+
+.tarjeta-caracteristica h3 {
+  margin-bottom: 12px;
+  color: #382f29;
+  font-size: 17px;
+}
+
+.tarjeta-caracteristica p {
+  color: #625b60;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* SECCIÓN DE LLAMADO A LA ACCIÓN */
+
+.seccion-llamado {
+  margin: 0 6% 80px;
+  padding: 70px 6%;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #64557f 0%, #7d6d9a 100%);
+  text-align: center;
+}
+
+.contenido-llamado h2 {
+  margin-bottom: 16px;
+  color: #fffdfb;
+  font-size: clamp(28px, 3.5vw, 42px);
+}
+
+.contenido-llamado p {
+  max-width: 480px;
+  margin: 0 auto 32px;
+  color: #e8e0f0;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.boton-grande {
+  padding: 16px 32px;
+  font-size: 16px;
+  background: #fffdfb;
+  color: #64557f;
+}
+
+.boton-grande:hover {
+  background: #f5e5dc;
+}
+
+.nota-llamado {
+  display: block;
+  margin-top: 16px;
+  color: #c9bce0;
+  font-size: 13px;
+}
+
+/* RESPONSIVE PARA NUEVAS SECCIONES */
+
+@media (max-width: 900px) {
+  .seccion-caracteristicas {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .seccion-caracteristicas {
+    grid-template-columns: 1fr;
+    padding: 0 5% 60px;
+  }
+
+  .seccion-llamado {
+    margin: 0 5% 60px;
+    padding: 50px 6%;
+  }
+}

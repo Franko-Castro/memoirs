@@ -1,0 +1,138 @@
+/* SeccionCTA.css */
+
+.tarjeta-cta {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  padding: 3.5rem 1.5rem;
+  background: var(--superficie-alta);
+  border: 2px dashed rgba(203, 196, 206, 0.7);
+  border-radius: var(--radio-tarjeta);
+  box-shadow: var(--sombra-tarjeta);
+  overflow: hidden;
+  background-image: radial-gradient(#d1bef0 0.85px, transparent 0.85px);
+  background-size: 16px 16px;
+}
+
+@media (min-width: 768px) {
+  .tarjeta-cta {
+    padding: 4.5rem 3rem;
+  }
+}
+
+/* Cintas washi en las esquinas */
+.washi-cta {
+  position: absolute;
+  width: 7rem;
+  height: 1.75rem;
+  pointer-events: none;
+}
+
+.washi-izq {
+  top: 1.25rem;
+  left: -1.5rem;
+  background: rgba(255, 217, 221, 0.9);
+  transform: rotate(-38deg);
+}
+
+.washi-der {
+  bottom: 1.25rem;
+  right: -1.5rem;
+  background: rgba(255, 223, 157, 0.9);
+  transform: rotate(-38deg);
+}
+
+.titulo-cta {
+  font-family: var(--fuente-titulo);
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--texto-principal);
+  max-width: 20ch;
+}
+
+.descripcion-cta {
+  max-width: 34rem;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--texto-secundario);
+}
+
+.acciones-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 0.75rem;
+}
+
+.boton-cta-primario {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 32px;
+  background: var(--primario);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(100, 85, 127, 0.45);
+  transition: all 0.2s;
+}
+
+.boton-cta-primario:hover {
+  background: var(--primario-claro);
+  transform: translateY(-2px);
+}
+
+.boton-cta-secundario {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 24px;
+  background: var(--superficie-baja);
+  color: var(--texto-principal);
+  font-family: var(--fuente-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  border: 1px solid rgba(203, 196, 206, 0.6);
+  border-radius: 8px;
+  box-shadow: var(--sombra-suave);
+  transition: all 0.2s;
+}
+
+.boton-cta-secundario:hover {
+  background: var(--superficie-mas-alta);
+}
+
+.detalles-cta {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 1.75rem;
+  padding-top: 1rem;
+  font-family: var(--fuente-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--texto-secundario);
+}
+
+.detalles-cta li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.detalles-cta .material-icono {
+  font-size: 16px;
+  color: var(--secundario);
+}

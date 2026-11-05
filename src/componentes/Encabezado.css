@@ -1,0 +1,142 @@
+/* Encabezado.css */
+.encabezado-fijo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: rgba(255, 241, 234, 0.95);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 16px rgba(74, 64, 58, 0.06);
+}
+
+.contenido-encabezado {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--texto-principal);
+}
+
+.logo-icono {
+  font-size: 1.5rem;
+}
+
+.logo-texto {
+  font-family: var(--fuente-titulo);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.logo-badge {
+  font-family: var(--fuente-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 2px 6px;
+  background: var(--superficie-alta);
+  color: var(--texto-secundario);
+  border-radius: 6px;
+}
+
+.navegacion-principal {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-enlace {
+  padding: 8px 16px;
+  font-size: 14px;
+  color: var(--texto-secundario);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.nav-enlace:hover {
+  color: var(--texto-principal);
+  background: rgba(245, 229, 220, 0.6);
+}
+
+.nav-enlace.activo {
+  background: var(--superficie-alta);
+  color: var(--texto-principal);
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(74, 64, 58, 0.05);
+}
+
+.acciones-encabezado {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.enlace-login {
+  font-family: var(--fuente-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--texto-secundario);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.enlace-login:hover {
+  color: var(--texto-principal);
+}
+
+.boton-primario {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  background: var(--primario);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(74, 64, 58, 0.07);
+  transition: all 0.2s;
+}
+
+.boton-primario:hover {
+  background: var(--primario-claro);
+}
+
+.avatar-perfil {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--superficie-alta);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .navegacion-principal {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .enlace-login {
+    display: none;
+  }
+}
