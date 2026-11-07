@@ -33,14 +33,28 @@ function App() {
 
         {usuario ? (
           <section className="espacio-usuario">
-            <h2>
-              ¡Bienvenido a MEMOIRS, {usuario.nombre || usuario.email}!
-            </h2>
+  <div className="contenido-espacio-usuario">
+    <span className="etiqueta-espacio">
+      ✦ TU ESPACIO PERSONAL
+    </span>
 
-            <p>
-              Tu sesión está iniciada correctamente.
-            </p>
-          </section>
+    <h2>
+      ¡Bienvenido a MEMOIRS!
+    </h2>
+
+    <p>
+      Nos alegra tenerte de vuelta,{' '}
+      {usuario.nombre ||
+        usuario.user_metadata?.nombre ||
+        usuario.email ||
+        'lector'}.
+    </p>
+
+    <p>
+      Tu sesión está iniciada correctamente.
+    </p>
+  </div>
+</section>
         ) : (
           <>
             <SeccionHero />

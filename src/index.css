@@ -99,3 +99,39 @@ section[id] {
   text-rendering: optimizeLegibility;
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
+.espacio-usuario {
+  min-height: 500px;
+  padding: 80px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--fondo, #f7ebe3);
+}
+
+.contenido-espacio-usuario {
+  width: 100%;
+  max-width: 1100px;
+  padding: 60px;
+  background: #fffaf6;
+  border: 1px solid #e8d9ce;
+  border-radius: 12px;
+  box-shadow: 0 12px 35px rgba(60, 40, 30, 0.06);
+}
+
+.etiqueta-espacio {
+  color: #a34b55;
+  font-family: var(--fuente-mono);
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.contenido-espacio-usuario h2 {
+  margin: 20px 0;
+  font-size: clamp(28px, 4vw, 42px);
+  color: #352d29;
+}
+
+.contenido-espacio-usuario p {
+  color: #74665e;
+  line-height: 1.7;
+}
